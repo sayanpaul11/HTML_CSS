@@ -1,0 +1,123 @@
+ * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 17px 0 10px;
+    background: #dfd686;
+    font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+    font-size: 12px;
+    color: #111;
+  }
+
+  #wrapper {
+    width: 765px;
+    margin: 0 auto;
+    background: #f0e9bf;
+    border: 1px solid #cfc78a;
+  }
+
+  #header {
+    height: 172px;
+    background:
+      radial-gradient(ellipse 520px 330px at 0% 100%, rgba(255,255,255,0) 60%, rgba(150,190,20,.18) 61%, rgba(255,255,255,0) 70%),
+      radial-gradient(ellipse 560px 360px at 100% 0%, rgba(255,255,255,0) 60%, rgba(150,190,20,.15) 61%, rgba(255,255,255,0) 72%),
+      linear-gradient(135deg, #b6da2a 0%, #bddd2b 50%, #b5d82a 100%);
+    border-bottom: 1px solid #c9c27f;
+    position: relative;
+  }
+  #header .title-box { position: absolute; left: 476px; top: 42px; }
+  #header h1 { margin: 0; font-size: 28px; font-weight: normal; color: #2c3a1c; }
+  #header p { margin: 12px 0 0; font-size: 15px; color: #2c3a1c; }
+
+  #page {
+    padding: 8px 8px 8px 9px;
+    background: repeating-linear-gradient(90deg, #f0e9bf 0, #f0e9bf 2px, #f5efcf 2px, #f5efcf 4px);
+  }
+
+  #nav {
+    border: 1px solid #c3bd9a;
+    background: #ebe6cb;
+    height: 44px;
+    margin-bottom: 18px;
+  }
+  #nav ul { list-style: none; margin: 0; padding: 0; display: flex; height: 100%; align-items: center; }
+  #nav a { display: block; text-decoration: none; font-size: 14px; color: #0e3b4f; }
+  #nav li:nth-child(1) { margin-left: 31px; }
+  #nav li:nth-child(n+2) { margin-left: 58px; }
+  #nav a:hover { text-decoration: underline; }
+
+  #columns { display: flex; align-items: flex-start; }
+
+  #sidebar { width: 178px; flex: none; margin-right: 13px; }
+  #sidebar h3 {
+    margin: 0;
+    height: 39px;
+    line-height: 39px;
+    background: #cdd656;
+    border: 1px solid #c4cd52;
+    font-size: 19px;
+    font-weight: normal;
+    padding-left: 27px;
+    position: relative;
+  }
+  #sidebar h3::before { content: "\2192"; position: absolute; left: 8px; top: 0; font-size: 11px; color: #333; }
+  #sidebar ul { list-style: none; margin: 10px 0 36px; padding: 0 0 0 10px; }
+  #sidebar ul li { height: 20.4px; line-height: 20px; }
+  #sidebar ul li::before { content: "\25A6"; font-size: 11px; color: #55603a; margin-right: 7px; }
+  #sidebar ul a { color: #3f4c2b; text-decoration: underline; }
+  #sidebar .block-text { padding: 14px 10px 0; line-height: 18px; }
+  #sidebar .block-text p { margin: 0 0 18px; }
+
+  #content {
+    flex: 1;
+    border-left: 1px dotted #d3cc9c;
+    padding-left: 12px;
+    margin-top: -2px;
+  }
+  #content h2 { margin: 26px 0 12px; font-size: 21px; font-weight: normal; }
+  #content p { margin: 0; line-height: 18px; }
+
+  .two-col { display: flex; margin-top: 34px; }
+  .two-col .col { width: 50%; }
+  .two-col .col:first-child { padding-right: 24px; border-right: 1px dotted #c9c28e; margin-right: 17px; }
+  .two-col .col:last-child { padding-right: 14px; }
+  .two-col h2 { margin-top: 0; margin-bottom: 14px; }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    width: 79px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    background: #b9dc2a;
+    border: 1px solid #8a9a3a;
+    color: #111;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .btn:hover { background: #a6c91f; }
+
+  /* Footer */
+  #footer {
+    margin-top: 14px;
+    height: 44px;
+    line-height: 40px;
+    background: #cde04e;
+    text-align: center;
+    font-size: 11px;
+  }
+
+  @media (max-width: 800px) {
+    #wrapper { width: 100%; }
+    #header .title-box { left: 24px; }
+    #columns, .two-col { flex-direction: column; }
+    #sidebar { width: 100%; margin-right: 0; }
+    #content { border-left: 0; padding-left: 0; }
+    .two-col .col { width: 100%; }
+    .two-col .col:first-child { border-right: 0; padding-right: 0; margin-right: 0; }
+    #nav { height: auto; }
+    #nav ul { flex-wrap: wrap; padding: 8px 12px; }
+    #nav li, #nav li:nth-child(n) { margin: 0 14px 0 0; }
+  }
